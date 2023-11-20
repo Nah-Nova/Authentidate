@@ -47,10 +47,18 @@ For this assignment, I have chosen Option 3: "App for singles (dating app) that 
 - (Any additional prerequisites...)
 
 ### Installation
-
-1. Clone this repository: `git clone https://github.com/your-repo-url.git`
+1. Clone this repository: `git clone https://github.com/Nah-Nova/Authentidate`
 2. Open the project in Visual Studio or Visual Studio Code.
-3. Build and run the application.
+3. Run the following commands in your terminal:
+
+   ```bash
+   sudo dotnet workload restore
+   nuget restore
+   ```
+
+4. Build and run the application.
+
+These commands will ensure that all the required workloads and NuGet packages are properly restored for your project.
 
 ## Usage
 

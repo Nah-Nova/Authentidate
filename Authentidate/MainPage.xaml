@@ -3,21 +3,33 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Authentidate.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="AuthentidateColor">#cc2247</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource AuthentidateColor}" />
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="TextColor" Value="{StaticResource AuthentidateColor}" />
+                <Setter Property="PlaceholderColor" Value="{StaticResource AuthentidateColor}" />
+                <Setter Property="BackgroundColor" Value="White" />
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource AuthentidateColor}" />
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
             <Image
-                Source="dotnet_bot.png"
+                Source="logo.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
                 SemanticProperties.Description="dot net bot in a race car number eight" />
-
-            <Label
-                Text="Login"
-                Style="{StaticResource Headline}"
-                SemanticProperties.HeadingLevel="Level1" />
-
             <Entry
                 x:Name="UsernameEntry"
                 Placeholder="Username"

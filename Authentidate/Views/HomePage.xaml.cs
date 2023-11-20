@@ -1,15 +1,34 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AuthentiDate.Views;
-
-public partial class HomePage : ContentPage
+namespace AuthentiDate.Views
 {
-    public HomePage()
+    public partial class HomePage : ContentPage
     {
-        InitializeComponent();
+        public HomePage()
+        {
+            InitializeComponent();
+            SetWelcomeMessage();
+        }
+
+        private void SetWelcomeMessage()
+        {
+            DateTime now = DateTime.Now;
+            string welcomeMessage = "";
+
+            if (now.Hour >= 0 && now.Hour < 12)
+            {
+                welcomeMessage = "Good morning!";
+            }
+            else if (now.Hour >= 12 && now.Hour < 18)
+            {
+                welcomeMessage = "Good afternoon!";
+            }
+            else
+            {
+                welcomeMessage = "Good evening!";
+            }
+
+            WelcomeLabel.Text = $"{welcomeMessage} Welcome to AuthentiDate!";
+        }
     }
 }
