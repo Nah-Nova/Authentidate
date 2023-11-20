@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Authentidate.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label
+                Text="Login"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Username"
+                Keyboard="Text"
+                SemanticProperties.Hint="Enter your username"
+                HorizontalOptions="Fill" />
+
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                SemanticProperties.Hint="Enter your password"
+                HorizontalOptions="Fill" />
+
+            <Button
+                x:Name="LoginBtn"
+                Text="Login"
+                SemanticProperties.Hint="Press to login"
+                Clicked="OnLoginClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
