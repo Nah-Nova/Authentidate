@@ -1,0 +1,20 @@
+﻿<Properties StartupConfiguration="{A58ADEE5-8A0B-4A43-B6EE-A351AABA0BF9}|Default">
+  <MonoDevelop.Ide.ItemProperties.Authentidate PreferredExecutionTarget="net7.0-ios" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Authentidate" expanded="True">
+            <Node name="Authentidate" expanded="True" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

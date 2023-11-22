@@ -18,6 +18,11 @@
                 <Setter Property="BackgroundColor" Value="{StaticResource AuthentidateColor}" />
                 <Setter Property="TextColor" Value="White" />
             </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource AuthentidateColor}" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="10" />
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -25,11 +30,13 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="25">
-            <Image
+            <Frame >
+                <Image
                 Source="logo.png"
                 HeightRequest="185"
                 Aspect="AspectFit"
-                SemanticProperties.Description="dot net bot in a race car number eight" />
+                SemanticProperties.Description="logo" />
+            </Frame>
             <Entry
                 x:Name="UsernameEntry"
                 Placeholder="Username"
