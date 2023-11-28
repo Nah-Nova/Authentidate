@@ -1,20 +1,118 @@
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AuthentiDate.Views.HomePage">
-    <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:model="clr-namespace:AuthentiDate.Models"
+            x:Class="AuthentiDate.Views.HomePage">
 
+
+   <!-- Swipe -->
+<ContentPage Title="Swipe">
+    <ContentPage.Content>
+        <StackLayout>
+            <!-- Welcome Label -->
             <Label x:Name="WelcomeLabel"
                    Text=""
                    HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="Center"
-                   Grid.Row="0" />
+                   VerticalOptions="Start"
+                   Margin="0,10,0,10" />
 
-            <!-- Your other content goes here (if any) -->
-        </Grid>
+            <!-- CarouselView for Profiles -->
+           <CarouselView x:Name="ProfilesCarousel"
+              ItemsSource="{Binding Profiles}"
+              PeekAreaInsets="100"
+              HorizontalOptions="FillAndExpand"
+              VerticalOptions="FillAndExpand"
+              ItemsLayout="VerticalList">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <Frame Margin="20"
+                   Padding="10"
+                   CornerRadius="10"
+                   BorderColor="DarkGray">
+                <StackLayout>
+                    <Image Source="{Binding ImageUrl}" 
+                           Aspect="AspectFill"
+                           HeightRequest="400"/>
+                    <Label Text="{Binding Name}" 
+                           FontSize="Medium"
+                           HorizontalOptions="Center"/>
+                    <!-- Add more profile details here -->
+
+                    <!-- Buttons for actions -->
+                    <Grid ColumnSpacing="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Dislike Button -->
+                        <Button Grid.Column="0"
+                                Text="X"
+                                BackgroundColor="LightGray"
+                                CornerRadius="20"
+                                Clicked="OnDislikeClicked"/>
+                        
+                        <!-- Like Button -->
+                        <Button Grid.Column="1"
+                                Text="❤️"
+                                BackgroundColor="LightGreen"
+                                CornerRadius="20"
+                                Clicked="OnLikeClicked"/>
+                        
+                        <!-- Super Like Button -->
+                        <Button Grid.Column="2"
+                                Text="⭐"
+                                BackgroundColor="LightBlue"
+                                CornerRadius="20"
+                                Clicked="OnSuperLikeClicked"/>
+                    </Grid>
+                </StackLayout>
+            </Frame>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
+
+
+
+
+    <!-- Matches -->
+    <ContentPage Title="Matches">
+        <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <!--Chats-->
+    <ContentPage Title="Chats">
+        <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+    <!--Profile-->
+    <ContentPage Title="Profile">
+        <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+            </Grid>
+        </ContentPage.Content>
+    </ContentPage>
+
+</TabbedPage>

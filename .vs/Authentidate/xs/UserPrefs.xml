@@ -1,20 +1,23 @@
 ﻿<Properties StartupConfiguration="{A58ADEE5-8A0B-4A43-B6EE-A351AABA0BF9}|Default">
-  <MonoDevelop.Ide.ItemProperties.Authentidate PreferredExecutionTarget="net7.0-ios" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Authentidate" expanded="True">
-            <Node name="Authentidate" expanded="True" selected="True" />
+          <Node name="Authentidate">
+            <Node name="Authentidate">
+              <Node name="Platforms" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6127AE6C-9A07-47CB-8E7E-C49D3CCA7D53" />
+  <MonoDevelop.Ide.ItemProperties.Authentidate PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6127AE6C-9A07-47CB-8E7E-C49D3CCA7D53" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>
