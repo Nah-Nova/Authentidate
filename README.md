@@ -30,6 +30,8 @@ For this assignment, I have chosen Option 3: "App for singles (dating app) that 
 - **Safety Measures**: Implement identity verification and safety features.
 - **User-Centered Design**: Place an emphasis on user experience and interface design.
 
+## Design
+[Authentidate-V1 High Fidelity Design](https://www.figma.com/file/PGEVCEQiztcgkpZBai1My2/Authentidate---V1?type=design&node-id=1%3A2&mode=design&t=AA3sQp2S6XCaOqGe-1)
 ## Technical Stack
 
 - **Framework**: .NET MAUI
