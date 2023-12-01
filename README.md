@@ -30,6 +30,8 @@ For this assignment, I have chosen Option 3: "App for singles (dating app) that 
 - **Safety Measures**: Implement identity verification and safety features.
 - **User-Centered Design**: Place an emphasis on user experience and interface design.
 
+## Design
+[Authentidate-V1 High Fidelity Design](https://www.figma.com/file/PGEVCEQiztcgkpZBai1My2/Authentidate---V1?type=design&node-id=1%3A2&mode=design&t=AA3sQp2S6XCaOqGe-1)
 ## Technical Stack
 
 - **Framework**: .NET MAUI
@@ -70,6 +72,34 @@ These commands will ensure that all the required workloads and NuGet packages ar
 - Report and block users for inappropriate behavior.
 - Follow community guidelines for respectful interactions.
 
+## Requirements
+### Gebruikersrequirements
+
+1. **Gebruikersregistratie**: Gebruikers moeten zich kunnen registreren met een e-mailadres en wachtwoord.
+2. **Profielaanmaak**: Gebruikers moeten hun persoonlijke profiel kunnen aanmaken, inclusief foto's en interesses.
+3. **Quizzen Beantwoorden**: Gebruikers moeten quizzen kunnen beantwoorden om hun compatibiliteit met anderen te bepalen.
+4. **Eigen Quizzen Maken**: Gebruikers moeten hun eigen quizzen kunnen maken en delen.
+5. **Privéberichten**: Gebruikers moeten veilig privéberichten kunnen versturen naar matches.
+6. **Profielprivacy**: Gebruikers moeten controle hebben over de zichtbaarheid van hun profiel en privacy-instellingen.
+7. **Rapporteren en Blokkeren**: Gebruikers moeten andere gebruikers kunnen rapporteren en blokkeren.
+8. **Communityrichtlijnen**: Er moeten duidelijke richtlijnen zijn voor respectvolle interacties binnen de app.
+9. **Gebruikersbeoordelingen**: Gebruikers moeten de mogelijkheid hebben om interacties met anderen te beoordelen.
+10. **Veiligheidsmaatregelen**: Er moeten identiteitsverificatie en veiligheidsfuncties zijn.
+
+### Systeemrequirements voor Authentidate
+
+1. **Authenticatie Systeem**: Implementeer een beveiligd authenticatiesysteem voor gebruikersregistratie en -login.
+2. **Profielbeheer Module**: Ontwikkel een systeem voor gebruikers om hun profielen te creëren en te bewerken.
+3. **Quiz Matching Algoritme**: Creëer een algoritme dat gebruikers matcht op basis van hun antwoorden op quizzen.
+4. **Quiz Management Systeem**: Ontwikkel functionaliteit voor gebruikers om hun eigen quizzen te maken en te beheren.
+5. **Berichtensysteem**: Implementeer een veilig systeem voor privéberichten tussen gebruikers.
+6. **Privacycontroles**: Ontwikkel een systeem dat gebruikers controle geeft over hun profielprivacy-instellingen.
+7. **Rapportage- en Blokkeringsfunctie**: Implementeer functies voor het rapporteren en blokkeren van gebruikers.
+8. **Handhaving van Communityrichtlijnen**: Integreer een systeem om de naleving van communityrichtlijnen te waarborgen.
+9. **Review en Feedback Systeem**: Ontwikkel een mechanisme voor gebruikers om feedback te geven over interacties.
+10. **Veiligheidsfeatures**: Implementeer features voor identiteitsverificatie en andere veiligheidsmaatregelen. 
+
+Deze requirements zorgen ervoor dat Authentidate zowel aan de verwachtingen van de gebruikers voldoet als technisch robuust en veilig is.
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
