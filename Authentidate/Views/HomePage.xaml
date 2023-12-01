@@ -1,83 +1,99 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-            xmlns:model="clr-namespace:AuthentiDate.Models"
-            x:Class="AuthentiDate.Views.HomePage">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:model="clr-namespace:AuthentiDate.Models"
+    x:Class="AuthentiDate.Views.HomePage">
 
 
-   <!-- Swipe -->
-<ContentPage Title="Swipe">
-    <ContentPage.Content>
-        <StackLayout>
-            <!-- Welcome Label -->
-            <Label x:Name="WelcomeLabel"
-                   Text=""
-                   HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="Start"
-                   Margin="0,10,0,10" />
+    <TabbedPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="AuthentidateColor">#cc2247</Color>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White" />
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" Value="{StaticResource AuthentidateColor}" />
+                <Setter Property="CornerRadius" Value="16" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand"/>
+            </Style>
 
-            <!-- CarouselView for Profiles -->
-           <CarouselView x:Name="ProfilesCarousel"
-              ItemsSource="{Binding Profiles}"
-              PeekAreaInsets="100"
-              HorizontalOptions="FillAndExpand"
-              VerticalOptions="FillAndExpand"
-              ItemsLayout="VerticalList">
-    <CarouselView.ItemTemplate>
-        <DataTemplate>
-            <Frame Margin="20"
-                   Padding="10"
-                   CornerRadius="10"
-                   BorderColor="DarkGray">
-                <StackLayout>
-                    <Image Source="{Binding ImageUrl}" 
-                           Aspect="AspectFill"
-                           HeightRequest="400"/>
-                    <Label Text="{Binding Name}" 
-                           FontSize="Medium"
-                           HorizontalOptions="Center"/>
-                    <!-- Add more profile details here -->
+        </ResourceDictionary>
+    </TabbedPage.Resources>
 
-                    <!-- Buttons for actions -->
-                    <Grid ColumnSpacing="10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
+    <!-- Swipe -->
+    <ContentPage Title="Swipe">
+        <ContentPage.Content>
+            <StackLayout x:Name="CardStack" Padding="20">
+                <Frame x:Name="SwipeCard"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="300"
+                    HeightRequest="400"
+                    >
+                    <!-- Add your card content here -->
+                    <StackLayout>
+                        <Image Source="{Binding CurrentProfile.ImageUrl}"
+                            Aspect="AspectFill" 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand"
+                         />
+                        <Label Text="{Binding CurrentProfile.Name}"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"
+                            Padding="8"
+                            TextColor="White"
+                            />
+                        <!-- Other profile details -->
+                    </StackLayout>
+                </Frame>
 
-                        <!-- Dislike Button -->
-                        <Button Grid.Column="0"
-                                Text="X"
-                                BackgroundColor="LightGray"
-                                CornerRadius="20"
-                                Clicked="OnDislikeClicked"/>
-                        
-                        <!-- Like Button -->
-                        <Button Grid.Column="1"
-                                Text="❤️"
-                                BackgroundColor="LightGreen"
-                                CornerRadius="20"
-                                Clicked="OnLikeClicked"/>
-                        
-                        <!-- Super Like Button -->
-                        <Button Grid.Column="2"
-                                Text="⭐"
-                                BackgroundColor="LightBlue"
-                                CornerRadius="20"
-                                Clicked="OnSuperLikeClicked"/>
-                    </Grid>
-                </StackLayout>
-            </Frame>
-        </DataTemplate>
-    </CarouselView.ItemTemplate>
-</CarouselView>
+                <!-- Buttons for actions -->
+                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Spacing="10">
+    <Button Clicked="OnLeftSwipeClicked" 
+            BackgroundColor="white" 
+            CornerRadius="30" 
+            WidthRequest="60" HeightRequest="60"
+            Padding="0">
+        <Button.Shadow>
+            <Shadow Brush="#99000000" Offset="0,10" Radius="3" Opacity="0.3" />
+        </Button.Shadow>
+        <Button.ImageSource>
+            <FontImageSource Glyph="✖️" FontFamily="Open Sans" />
+        </Button.ImageSource>
+    </Button>
 
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+    <Button Clicked="OnRightSwipeClicked" 
+            BackgroundColor="#cc2247" 
+            CornerRadius="45" 
+            WidthRequest="90" HeightRequest="90"
+            Padding="0">
+        <Button.Shadow>
+            <Shadow Brush="#99000000" Offset="0,10" Radius="5" Opacity="0.3" />
+        </Button.Shadow>
+        <Button.ImageSource>
+            <FontImageSource Glyph="🤍" FontFamily="Open Sans" />
+        </Button.ImageSource>
+    </Button>
 
+    <Button Clicked="OnSkipClicked" 
+            BackgroundColor="white" 
+            CornerRadius="30" 
+            WidthRequest="60" HeightRequest="60"
+            Padding="0">
+        <Button.Shadow>
+            <Shadow Brush="#99000000" Offset="0,10" Radius="3" Opacity="0.3" />
+        </Button.Shadow>
+        <Button.ImageSource>
+            <FontImageSource Glyph="⭐" FontFamily="Open Sans" />
+        </Button.ImageSource>
+    </Button>
+</StackLayout>
 
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
 
 
     <!-- Matches -->
