@@ -19,6 +19,7 @@ For this assignment, I have chosen Option 3: "App for singles (dating app) that 
 ## Features
 
 - **User Authentication**: Implement secure user authentication and registration.
+- **User Matching**: Implement Matching screen with swipe actions etc like tinder
 - **Quiz-Based Matching**: Allow users to answer quizzes to determine compatibility with others.
 - **Profile Creation**: Enable users to create detailed profiles with photos and interests.
 - **Custom Quizzes**: Let users create and share their quizzes for matchmaking.
@@ -28,6 +29,12 @@ For this assignment, I have chosen Option 3: "App for singles (dating app) that 
 - **Community Standards**: Enforce clear guidelines for respectful interactions.
 - **User Reviews**: Allow ratings and reviews for user interactions.
 - **Safety Measures**: Implement identity verification and safety features.
+- **User-Centered Design**: Place an emphasis on user experience and interface design.
+
+## Uitgewerkte Features:
+- **User Authentication**: Implement secure user authentication and registration.
+- **Profile Creation**: Enable users to create detailed profiles with photos and interests. (Minimal Version)
+- **User Matching**: Implement Matching screen with swipe actions etc like tinder
 - **User-Centered Design**: Place an emphasis on user experience and interface design.
 
 ## Design
