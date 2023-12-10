@@ -113,27 +113,226 @@ UC10: Matches Managen
 UC11: Berichten sturen
 
 ## Usecase Desciptions
-### Use Case 1: Account Beheren
-| Use Case | UC1: Account Beheren |
+Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon voor de overige use cases.
+Voor de andere use cases kan een vergelijkbaar sjabloon worden gebruikt:
+### Use Case [Nummer]: [Titel]
+| Use Case | UC[Nummer]: [Titel] |
 |:----------------|:--------------------------|
-| **Description** | Gebruiker beheert account |
-| **Actor** | Gebruiker |
-| **Trigger(s)** | De gebruiker navigeert naar de account tab in de app |
-| **Pre-Conditions** | - Gebruiker heeft een account & is geverifeerd |
-| **Post-Conditions** | - Account is beheert |
+| **Description** | [Korte beschrijving van wat de use case inhoudt] |
+| **Actor** | [De primaire actor, meestal de gebruiker of het systeem] |
+| **Trigger(s)** | [Wat initieert de use case?] |
+| **Pre-Conditions** | [Voorwaarden voordat de use case begint] |
+| **Post-Conditions** | [De staat van het systeem na voltooiing van de use case] |
 | **Steps** | 
 | **Actor (User)** | **System** |
-| 1. Gebruiker drukt op tab genaamd accont | |
-|  | 2. System toont account pagina|
-| 3. Gebruiker heeft de mogelijkheid variabelen te weizigen | |
-|  4. Gebruiker wijzigt email| |
-|  | 5. System controleert of email al in gebruik is|
-|  | 6. System stuurt data to db|
-| | 7.System geeft succes |
-| 8. Gebruiker verlaat account pagina tijdens bewerken | |
-|  | 9. System geeft error error |
-| **Main success scenario**|1, 2, 3, 4, 5, 6, 7|
-| **Alternatieve scenario's**|1, 8 <br> 1, 2, 3, 4, 5, 9|
+| 1. [Actie door de gebruiker] | |
+|  | 2. [Reactie van het systeem] |
+| [Verdere stappen...] | |
+| **Main Success Scenario** | [Beschrijving van het pad voor het succesvol afronden van de use case] |
+| **Alternative Scenarios** | [Beschrijving van alternatieve paden] |
+| **Extensions** |
+| [Extensiepunt] | [Beschrijving van de extensie] |
+
+### Use Case 1: Account Beheren (Uitgebreid)
+| Use Case | UC1: Account Beheren |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker kan accountinstellingen aanpassen, zoals e-mailadres, wachtwoord, en profielinformatie. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker kiest ervoor om accountinstellingen aan te passen. |
+| **Pre-Conditions** | De gebruiker moet ingelogd en geverifieerd zijn. |
+| **Post-Conditions** | De wijzigingen zijn opgeslagen en het account is bijgewerkt. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert de optie om accountinstellingen te beheren. | |
+|  | 2. Het systeem presenteert de accountinstellingen pagina. |
+| 3. De gebruiker kiest een instelling om te wijzigen (bijv. e-mail, wachtwoord). | |
+| 4. De gebruiker voert de nieuwe informatie in en bevestigt de wijzigingen. | |
+|  | 5. Het systeem valideert en verwerkt de wijzigingen. |
+|  | 6. Het systeem slaat de wijzigingen op in de database. |
+|  | 7. Het systeem bevestigt dat de wijzigingen succesvol zijn doorgevoerd. |
+| **Main Success Scenario** | De gebruiker voltooit het bijwerken van de accountinstellingen succesvol. |
+| **Alternative Scenarios** | De gebruiker probeert een reeds bestaande e-mail te gebruiken of verlaat de pagina voordat de wijzigingen zijn opgeslagen. |
+| **Extensions** |
+| 5a. De ingevoerde e-mail is al in gebruik: | 5a1. Het systeem informeert de gebruiker en vraagt om een ander e-mailadres. |
+| 7a. De gebruiker verlaat de pagina voordat de wijzigingen zijn opgeslagen: | 7a1. Het systeem waarschuwt de gebruiker dat de wijzigingen nog niet zijn opgeslagen. |
+
+### Use Case 2: Gebruiker Registreren
+| Use Case | UC2: Gebruiker Registreren |
+|:----------------|:--------------------------|
+| **Description** | Nieuwe gebruiker maakt een account aan op de dating app. |
+| **Actor** | Potentiële gebruiker |
+| **Trigger(s)** | De potentiële gebruiker selecteert de optie om een nieuw account te registreren. |
+| **Pre-Conditions** | De gebruiker heeft de app geïnstalleerd en heeft nog geen account. |
+| **Post-Conditions** | Een nieuw gebruikersaccount is aangemaakt en klaar voor gebruik. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker kiest voor 'Registreren'. | |
+|  | 2. Het systeem toont het registratieformulier. |
+| 3. De gebruiker vult het registratieformulier in (e-mail, wachtwoord, etc.). | |
+|  | 4. Het systeem valideert de ingevoerde gegevens. |
+|  | 5. Het systeem creëert het account en slaat de gegevens op. |
+|  | 6. Het systeem stuurt een verificatie-e-mail naar de gebruiker. |
+| **Main Success Scenario** | De gebruiker voltooit succesvol de registratie en verifieert het account via e-mail. |
+| **Alternative Scenarios** | De gebruiker voert een e-mail in die al in gebruik is of voldoet niet aan de wachtwoordcriteria. |
+
+### Use Case 3: Gebruiker Inloggen
+| Use Case | UC3: Gebruiker Inloggen |
+|:----------------|:--------------------------|
+| **Description** | Geregistreerde gebruiker logt in op de app. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker selecteert de optie om in te loggen. |
+| **Pre-Conditions** | De gebruiker heeft al een account. |
+| **Post-Conditions** | De gebruiker heeft toegang tot zijn of haar account op de app. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert 'Inloggen'. | |
+|  | 2. Het systeem toont het inlogscherm. |
+| 3. De gebruiker vult de inloggegevens in. | |
+|  | 4. Het systeem valideert de gegevens en geeft de gebruiker toegang tot het account. |
+| **Main Success Scenario** | De gebruiker krijgt toegang tot het account na het invoeren van geldige inloggegevens. |
+| **Alternative Scenarios** | De inloggegevens zijn onjuist, en het systeem toont een foutmelding. |
+
+### Use Case 4: Account Verwijderen
+| Use Case | UC4: Account Verwijderen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker verwijdert zijn of haar account permanent uit de app. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker selecteert de optie om het account te verwijderen. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft toegang tot accountinstellingen. |
+| **Post-Conditions** | Het account van de gebruiker is niet langer actief en alle gegevens zijn verwijderd. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker gaat naar accountinstellingen en selecteert 'Account verwijderen'. | |
+|  | 2. Het systeem vraagt om bevestiging van de gebruiker. |
+| 3. De gebruiker bevestigt de wens om het account te verwijderen. | |
+|  | 4. Het systeem verwijdert alle gebruikersgegevens en deactiveert het account. |
+| **Main Success Scenario** | Het account wordt succesvol verwijderd na bevestiging van de gebruiker. |
+| **Alternative Scenarios** | De gebruiker annuleert het verwijderingsproces. |
+
+### Use Case 5: Interesse Managen
+| Use Case | UC
+5: Interesse Managen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker beheert zijn of haar interesses om betere matches te krijgen. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker wil interesses toevoegen, verwijderen of bijwerken. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft een profiel aangemaakt. |
+| **Post-Conditions** | De lijst van interesses van de gebruiker is bijgewerkt. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker gaat naar het profiel en selecteert 'Interesses bewerken'. | |
+|  | 2. Het systeem toont de huidige interesses en opties voor het beheer ervan. |
+| 3. De gebruiker voegt nieuwe interesses toe of verwijdert bestaande. | |
+|  | 4. Het systeem slaat de wijzigingen op. |
+| **Main Success Scenario** | De gebruiker werkt de interesses bij voor een betere matchmaking ervaring. |
+| **Alternative Scenarios** | De gebruiker besluit geen wijzigingen door te voeren en annuleert het proces. |
+
+
+### Use Case 6: Wachtwoord Vergeten
+| Use Case | UC6: Wachtwoord Vergeten |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker reset het vergeten wachtwoord om weer toegang te krijgen tot het account. |
+| **Actor** | Niet-ingelogde gebruiker |
+| **Trigger(s)** | De gebruiker kan niet inloggen vanwege een vergeten wachtwoord. |
+| **Pre-Conditions** | De gebruiker heeft reeds een account. |
+| **Post-Conditions** | De gebruiker heeft een nieuw wachtwoord ingesteld en kan inloggen. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert 'Wachtwoord vergeten?'. | |
+|  | 2. Het systeem vraagt om het e-mailadres van de gebruiker. |
+| 3. De gebruiker voert het e-mailadres in en verzoekt om een reset link. | |
+|  | 4. Het systeem stuurt een wachtwoord reset link naar het opgegeven e-mailadres. |
+| 5. De gebruiker klikt op de link en voert een nieuw wachtwoord in. | |
+|  | 6. Het systeem valideert en slaat het nieuwe wachtwoord op. |
+| **Main Success Scenario** | De gebruiker stelt met succes een nieuw wachtwoord in en krijgt toegang tot het account. |
+| **Alternative Scenarios** | Het opgegeven e-mailadres komt niet overeen met een bestaand account. |
+
+### Use Case 7: Matchen
+| Use Case | UC7: Matchen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker krijgt matches voorgesteld op basis van overeenkomstige antwoorden op quizzen. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker heeft een quiz ingevuld of een profiel bijgewerkt. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft quizzen ingevuld. |
+| **Post-Conditions** | De gebruiker heeft een lijst met potentiële matches. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+|  | 1. Het systeem gebruikt de antwoorden op de quiz om compatibele matches te vinden. |
+| 2. De gebruiker bekijkt de voorgestelde matches. | |
+| 3. De gebruiker kiest ervoor om een 'like' te geven of verder te gaan. | |
+|  | 4. Bij wederzijdse 'likes' stelt het systeem een match vast. |
+| **Main Success Scenario** | Gebruikers worden gematcht en kunnen beginnen met communiceren. |
+| **Alternative Scenarios** | Geen matches gevonden of de gebruiker kiest ervoor niemand te 'liken'. |
+
+### Use Case 8: Foto Insturen
+| Use Case | UC8: Foto Insturen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker voegt foto's toe aan het profiel om zichzelf visueel te presenteren. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker wil foto's toevoegen aan het profiel. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft toegang tot het profiel. |
+| **Post-Conditions** | Foto's zijn toegevoegd aan het gebruikersprofiel. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert de optie om foto's toe te voegen. | |
+|  | 2. Het systeem opent de fotogalerij of camera. |
+| 3. De gebruiker kiest een foto en uploadt deze. | |
+|  | 4. Het systeem valideert de foto en voegt deze toe aan het profiel. |
+| **Main Success Scenario** | De foto wordt succesvol toegevoegd aan het profiel van de gebruiker. |
+| **Alternative Scenarios** | De foto voldoet niet aan de communityrichtlijnen en wordt afgewezen. |
+
+### Use Case 9: Vragenlijst Managen
+| Use Case | UC9:
+
+ Vragenlijst Managen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker maakt of wijzigt een persoonlijke vragenlijst voor matching doeleinden. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker wil een vragenlijst maken of bijwerken. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft een profiel. |
+| **Post-Conditions** | Een nieuwe of bijgewerkte vragenlijst is opgeslagen in het profiel van de gebruiker. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert de optie om een vragenlijst te managen. | |
+|  | 2. Het systeem toont de bestaande vragenlijst of opties voor een nieuwe. |
+| 3. De gebruiker voegt vragen toe, verwijdert ze of wijzigt ze. | |
+|  | 4. Het systeem slaat de wijzigingen op in de vragenlijst. |
+| **Main Success Scenario** | De gebruiker heeft succesvol een vragenlijst gecreëerd of bijgewerkt. |
+| **Alternative Scenarios** | De gebruiker annuleert de wijzigingen of slaat ze niet op. |
+
+### Use Case 10: Matches Managen
+| Use Case | UC10: Matches Managen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker beheert de lijst van huidige matches en communicatie. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker wil interactie hebben met de huidige matches. |
+| **Pre-Conditions** | De gebruiker is ingelogd en heeft een lijst van matches. |
+| **Post-Conditions** | De gebruiker heeft de interacties met matches bijgewerkt. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker opent de lijst van matches. | |
+|  | 2. Het systeem toont alle huidige matches. |
+| 3. De gebruiker selecteert een match om te communiceren of te verwijderen. | |
+|  | 4. Het systeem voert de actie uit zoals aangegeven door de gebruiker. |
+| **Main Success Scenario** | De gebruiker beheert de matches en begint of beëindigt communicatie. |
+| **Alternative Scenarios** | De gebruiker kan geen beslissing nemen en verlaat de lijst. |
+
+### Use Case 11: Berichten Sturen
+| Use Case | UC11: Berichten Sturen |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker stuurt berichten naar een match om communicatie te starten of voort te zetten. |
+| **Actor** | Geregistreerde gebruiker |
+| **Trigger(s)** | De gebruiker wil communiceren met een match. |
+| **Pre-Conditions** | De gebruiker is gematcht met een andere gebruiker en beide hebben toegang tot de berichtenfunctie. |
+| **Post-Conditions** | Bericht(en) is/zijn verzonden en ontvangen door de match. |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. De gebruiker selecteert een match om mee te communiceren. | |
+|  | 2. Het systeem opent de chat met de geselecteerde match. |
+| 3. De gebruiker typt een bericht en verzendt dit. | |
+|  | 4. Het systeem verzendt het bericht naar de match. |
+| **Main Success Scenario** | De communicatie wordt succesvol gestart of voortgezet tussen de gebruiker en de match. |
+| **Alternative Scenarios** | Het bericht kan niet worden verzonden door technische problemen. |
 
 ##UML Diagrammen 📊
 Hier staan alle diagrammen met enige toegevoegde waarde voor authentidate allemaal volgens uml specificatie.
