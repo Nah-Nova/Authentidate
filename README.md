@@ -97,7 +97,50 @@ These commands will ensure that all the required workloads and NuGet packages ar
 7. **Rapportage- en Blokkeringsfunctie**: Implementeer functies voor het rapporteren en blokkeren van gebruikers.
 8. **Handhaving van Communityrichtlijnen**: Integreer een systeem om de naleving van communityrichtlijnen te waarborgen.
 9. **Review en Feedback Systeem**: Ontwikkel een mechanisme voor gebruikers om feedback te geven over interacties.
-10. **Veiligheidsfeatures**: Implementeer features voor identiteitsverificatie en andere veiligheidsmaatregelen. 
+10. **Veiligheidsfeatures**: Implementeer features voor identiteitsverificatie en andere veiligheidsmaatregelen.
+
+###Use Cases:
+UC1: Account beheren
+UC2: Gebruiker registreren
+UC3: Gebruiker inloggen
+UC4: Account verwijderen
+UC5: Interesse Managen
+UC6: Wachtwoord vergeten
+UC7: Matchen
+UC8: Foto Insturen
+UC9: Vragenlijst Managen
+UC10: Matches Managen
+UC11: Berichten sturen
+
+## Usecase Desciptions
+### Use Case 1: Account Beheren
+| Use Case | UC1: Account Beheren |
+|:----------------|:--------------------------|
+| **Description** | Gebruiker beheert account |
+| **Actor** | Gebruiker |
+| **Trigger(s)** | De gebruiker navigeert naar de account tab in de app |
+| **Pre-Conditions** | - Gebruiker heeft een account & is geverifeerd |
+| **Post-Conditions** | - Account is beheert |
+| **Steps** | 
+| **Actor (User)** | **System** |
+| 1. Gebruiker drukt op tab genaamd accont | |
+|  | 2. System toont account pagina|
+| 3. Gebruiker heeft de mogelijkheid variabelen te weizigen | |
+|  4. Gebruiker wijzigt email| |
+|  | 5. System controleert of email al in gebruik is|
+|  | 6. System stuurt data to db|
+| | 7.System geeft succes |
+| 8. Gebruiker verlaat account pagina tijdens bewerken | |
+|  | 9. System geeft error error |
+| **Main success scenario**|1, 2, 3, 4, 5, 6, 7|
+| **Alternatieve scenario's**|1, 8 <br> 1, 2, 3, 4, 5, 9|
+
+##UML Diagrammen 📊
+Hier staan alle diagrammen met enige toegevoegde waarde voor authentidate allemaal volgens uml specificatie.
+
+###Use Case Diagram:
+<img width="794" alt="Screenshot 2023-12-10 at 11 56 22" src="https://github.com/Nah-Nova/Authentidate/assets/56248103/82449ad1-c692-4fd1-aeb3-a5e297d438d6">
+
 
 Deze requirements zorgen ervoor dat Authentidate zowel aan de verwachtingen van de gebruikers voldoet als technisch robuust en veilig is.
 ## License
