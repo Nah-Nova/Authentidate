@@ -331,10 +331,10 @@ Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon
 | **Main Success Scenario** | De communicatie wordt succesvol gestart of voortgezet tussen de gebruiker en de match. |
 | **Alternative Scenarios** | Het bericht kan niet worden verzonden door technische problemen. |
 
-##UML Diagrammen 📊
+## UML Diagrammen 📊
 Hier staan alle diagrammen met enige toegevoegde waarde voor authentidate allemaal volgens uml specificatie.
 
-###Use Case Diagram:
+### Use Case Diagram:
 <img width="794" alt="Screenshot 2023-12-10 at 11 56 22" src="https://github.com/Nah-Nova/Authentidate/assets/56248103/82449ad1-c692-4fd1-aeb3-a5e297d438d6">
 
 
