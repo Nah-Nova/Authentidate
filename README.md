@@ -113,8 +113,8 @@ UC10: Matches Managen
 UC11: Berichten sturen
 
 ## Usecase Desciptions
-Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon voor de overige use cases.
-Voor de andere use cases kan een vergelijkbaar sjabloon worden gebruikt:
+Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon
+
 ### Use Case [Nummer]: [Titel]
 | Use Case | UC[Nummer]: [Titel] |
 |:----------------|:--------------------------|
