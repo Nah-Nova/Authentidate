@@ -344,8 +344,73 @@ Hier staan alle diagrammen met enige toegevoegde waarde voor authentidate allema
 ### Use Case Diagram:
 <img width="794" alt="Screenshot 2023-12-10 at 11 56 22" src="https://github.com/Nah-Nova/Authentidate/assets/56248103/82449ad1-c692-4fd1-aeb3-a5e297d438d6">
 
+## Data lijst
+Datamodel voor de Authentidate app, Hieronder vind je een lijst van mogelijke datatypes en de gegevens die ik zou willen opslaan, geordend per categorie:
 
-Deze requirements zorgen ervoor dat Authentidate zowel aan de verwachtingen van de gebruikers voldoet als technisch robuust en veilig is.
+### Gebruikersprofiel en Authenticatie:
+- **UserID**: Unieke identificatie voor elke gebruiker.
+- **E-mail**: E-mailadres van de gebruiker voor inloggen en communicatie.
+- **WachtwoordHash**: Gehashte versie van het wachtwoord voor veiligheid.
+- **Profielnaam**: Weergavenaam van de gebruiker.
+- **Profielbeschrijving**: Biografie of beschrijving van de gebruiker.
+- **Leeftijd**: Leeftijd van de gebruiker.
+- **Geslacht**: Geslacht waarmee de gebruiker zich identificeert.
+- **Interesses**: Lijst van interesses of hobby's van de gebruiker.
+- **Profielfoto's**: URL's van de profielfoto's van de gebruiker.
+- **Locatie**: Geografische locatie voor matching.
+- **Laatste Login**: Datum en tijd van de laatste login.
+- **AccountStatus**: Status van het account (actief, geschorst, verwijderd).
+- **VerificatieStatus**: Indicatie of de gebruiker geverifieerd is.
+- **PrivacyInstellingen**: Voorkeuren voor zichtbaarheid van het profiel.
+
+### Matching en Interacties:
+- **MatchID**: Unieke identifier voor elke match.
+- **Gebruiker1ID & Gebruiker2ID**: UserIDs van de gematchte personen.
+- **MatchScore**: Numerieke waarde die de compatibiliteit aangeeft.
+- **MatchStatus**: Huidige status van de match (nieuw, actief, etc.).
+- **MatchTimestamp**: Datum en tijd van het ontstaan van de match.
+- **MatchVoorkeuren**: Voorkeuren voor potentiële matches (leeftijdsbereik, locatie, etc.).
+- **FeedbackID**: Identifier voor gebruikersfeedback op matches.
+- **FeedbackScore**: Score voor de tevredenheid over een match.
+- **FeedbackCommentaar**: Opmerkingen of suggesties over de match.
+
+### Quizzen en Voorkeuren:
+- **QuizID**: Identifier voor een quiz.
+- **VraagID**: Identifier voor individuele vragen.
+- **AntwoordID**: Identifier voor antwoorden van gebruikers.
+- **AntwoordWaarde**: Tekstuele of numerieke waarde van het antwoord.
+- **Gewicht**: Belang van de vraag in het matching algoritme.
+- **VoorkeurID**: Identifier voor gebruikersvoorkeuren.
+- **VoorkeurType**: Type van voorkeur (leeftijd, locatie, interesses, etc.).
+- **VoorkeurWaarde**: Specifieke waarde(n) van de voorkeur.
+
+### Veiligheid en Gebruikersgedrag:
+- **BlokID**: Identifier voor een blokkering.
+- **BlokkerendeGebruikerID**: UserID van de blokkerende gebruiker.
+- **GeblokkeerdeGebruikerID**: UserID van de geblokkeerde gebruiker.
+- **BlokReden**: Optionele reden van blokkering.
+- **BlokTimestamp**: Datum en tijd van blokkering.
+- **RapportID**: Identifier voor rapportages.
+- **GerapporteerdeUserID**: UserID van de gerapporteerde gebruiker.
+- **RapporterendeUserID**: UserID van de rapporterende gebruiker.
+- **RedenVanRapport**: Reden voor de rapportage.
+- **ReviewID**: Identifier voor reviews en beoordelingen.
+- **ReviewScore**: Score of rating van de beoordeling.
+- **ReviewCommentaar**: Opmerkingen bij de review.
+
+### Berichten en Communicatie:
+- **BerichtID**: Identifier voor berichten.
+- **VerzenderID & OntvangerID**: UserIDs van zender en ontvanger.
+- **BerichtInhoud**: Inhoud van het bericht.
+- **BerichtTimestamp**: Datum en tijd van verzending.
+- **Leesbevestiging**: Status van leesbevestiging.
+
+### App Prestatie en Gebruiksdata:
+- **GebruiksStatistieken**: Data over het gebruik van de app.
+- **Foutenlogs**: Logs van fouten binnen de app.
+- **AppVersie**: Huidige versie van de app.
+- **GebruikersFeedback**: Feedback van gebruikers over de app.
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
