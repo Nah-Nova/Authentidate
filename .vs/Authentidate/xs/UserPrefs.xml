@@ -1,28 +1,32 @@
 ﻿<Properties StartupConfiguration="{A58ADEE5-8A0B-4A43-B6EE-A351AABA0BF9}|Default">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <Xamarin.Addins.Core.Project ActiveDebugTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6127AE6C-9A07-47CB-8E7E-C49D3CCA7D53" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.Authentidate PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6127AE6C-9A07-47CB-8E7E-C49D3CCA7D53" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Authentidate/Views/HomePage.xaml">
+    <Files>
+      <File FileName="Authentidate/Views/HomePage.xaml.cs" Line="87" Column="17" />
+      <File FileName="Authentidate/Views/HomePage.xaml" Line="32" Column="39" />
+      <File FileName="Authentidate/MainPage.xaml" Line="6" Column="5" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Authentidate">
             <Node name="Authentidate" expanded="True">
-              <Node name="Models" expanded="True">
-                <Node name="Profile.cs" selected="True" />
-              </Node>
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="HomePage.xaml" expanded="True" />
               </Node>
+              <Node name="MainPage.xaml" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.Authentidate PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.6127AE6C-9A07-47CB-8E7E-C49D3CCA7D53" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
