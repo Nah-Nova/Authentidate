@@ -210,8 +210,7 @@ Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon
 | **Alternative Scenarios** | De gebruiker annuleert het verwijderingsproces. |
 
 ### Use Case 5: Interesse Managen
-| Use Case | UC
-5: Interesse Managen |
+| Use Case | UC5: Interesse Managen |
 |:----------------|:--------------------------|
 | **Description** | Gebruiker beheert zijn of haar interesses om betere matches te krijgen. |
 | **Actor** | Geregistreerde gebruiker |
@@ -282,9 +281,7 @@ Hieronder volgt een uitbreiding van Use Case 1/11 en een sjabloon
 | **Alternative Scenarios** | De foto voldoet niet aan de communityrichtlijnen en wordt afgewezen. |
 
 ### Use Case 9: Vragenlijst Managen
-| Use Case | UC9:
-
- Vragenlijst Managen |
+| Use Case | UC9: Vragenlijst Managen |
 |:----------------|:--------------------------|
 | **Description** | Gebruiker maakt of wijzigt een persoonlijke vragenlijst voor matching doeleinden. |
 | **Actor** | Geregistreerde gebruiker |
